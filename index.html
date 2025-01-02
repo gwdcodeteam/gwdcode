@@ -1,0 +1,94 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人主页</title>
+    <style>
+        .container {
+            width: 100%;
+            height: 100vh; /* 或者指定一个固定的像素高度 */
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .left{
+            flex-basis: 20%; /* 根据需要调整左右区域的宽度 */
+        }
+
+        .right {
+            flex-basis: 20%; /* 根据需要调整左右区域的宽度 */
+            /*background-color: #f1f1f1; !* 示例背景色，可自定义 *!*/
+            margin-top: 100px; /* 替换为所需的间距值，例如20px、1em等 */
+        }
+
+        .center {
+            flex-basis: 60%; /* 中间区域占据剩余空间，确保左右对称 */
+            /*background-color: #eaeaea; !* 示例背景色，可自定义 *!*/
+        }
+
+        /* 选择所有相邻的a标签 */
+        .center a + a {
+            margin-left: 10px; /* 替换为所需的间距值，例如10px、1em等 */
+        }
+
+        .right ul li {
+            margin-bottom: 10px; /* 替换为所需的间距值，例如10px、1em等 */
+        }
+
+        .center img {
+            display: inline-block;
+            width: auto; /* 替换为所需的宽度值 */
+            height: 300px; /* 保持原图宽高比 */
+            vertical-align: middle; /* 可选，使图片垂直居中对齐 */
+        }
+
+        h1>span {
+            font-family: '华文细黑',serif;
+            font-weight: bold;
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">
+            <span style="background-color: grey;">首页版本：(2024-4-26 13:04:46)</span>
+            <a href="#" style="font-size:10px;color: grey;">版本历史</a>
+        </div>
+        <div class="center" style="text-align: center;">
+            <h1><span>gwdcode</span>个人主页<a style="font-size: 15px;color: black;text-decoration: none;" href="https://gitee.com/gwdcode/gwdcode" target="_blank">（当前仓库地址）</a></h1>
+            <div style="margin-bottom: 30px;">
+                <a href="./personal.html" style="color: black;">个人介绍</a>
+                <a href="./music.html" style="color: black;" target="_blank">音乐</a>
+            </div>
+            <div>
+                <img src="files/微信.png">
+                <img src="files/微信视频号.jpg">
+                <p style="color: red;">手机扫描二维码关注视频号或者微信</p>
+            </div>
+            <div id="QrCode" style="margin: 0 auto;"></div>
+            <p><a href="https://vue.ruoyi.vip/login" target="_blank" style="color: #00b71d;">ruoyi项目演示</a></p>
+        </div>
+        <div class="right">
+            <a href="https://gitee.com/gwdcode/WeTalkCodeInGitee/issues" style="color: green;" target="_blank">其他推荐（列表）</a>
+            <ul>
+                <li>
+                    <a href="files/MyApp.jar">下载Java应用(.jar)</a>
+                    <span style="font-style: italic;color: red;">*确保您已经安装了</span>
+                    <a href="https://java.com/" target="_blank">Java</a>
+                    <a style="text-decoration:none;" href="https://www.tiobe.com/tiobe-index/" target="_blank">(tiobe编程语言排行)</a>
+                </li>
+                <li>
+                    <a href="files/MyIDEAPlugin-1.0-SNAPSHOT.zip" style="color: black;">IDEA编辑器插件下载(.zip)</a>
+                </li>
+                <li>
+                    <a href="files/app-debug.apk" style="font-size: 17px;">下载安卓（Android）应用(.apk)</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
